@@ -1,0 +1,226 @@
+# Copyright (C) 2025 Studio Immens
+# This file is distributed under the GPLv3.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooPrint Receipts 1.0.0\n"
+"Report-Msgid-Bugs-To: https://studioimmens.com\n"
+"Last-Translator: Studio Immens <info@studioimmens.com>\n"
+"Language-Team: Studio Immens\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Language: en_US\n"
+"X-Generator: si-wooprint-receipts 1.0.0\n"
+
+#: si-wooprint-receipts.php:42
+msgid "WooPrint Receipts requires WooCommerce to be installed and active."
+msgstr ""
+
+#: includes/class-main.php:51
+msgid "Settings"
+msgstr ""
+
+#: includes/class-settings.php:54
+msgid "WooPrint Receipts"
+msgstr ""
+
+#: includes/class-settings.php:70
+msgid "General Settings"
+msgstr ""
+
+#: includes/class-settings.php:76
+msgid "Header Image"
+msgstr ""
+
+#: includes/class-settings.php:82
+msgid "Header Text"
+msgstr ""
+
+#: includes/class-settings.php:83
+msgid "Additional text displayed at the top of the receipt"
+msgstr ""
+
+#: includes/class-settings.php:89
+msgid "Footer Text"
+msgstr ""
+
+#: includes/class-settings.php:90
+msgid "Additional text displayed at the bottom of the receipt"
+msgstr ""
+
+#: includes/class-settings.php:96
+msgid "Table Columns"
+msgstr ""
+
+#: includes/class-settings.php:99
+msgid "Product ID"
+msgstr ""
+
+#: includes/class-settings.php:100
+msgid "Quantity"
+msgstr ""
+
+#: includes/class-settings.php:101
+msgid "Product Name"
+msgstr ""
+
+#: includes/class-settings.php:102
+msgid "Line Total"
+msgstr ""
+
+#: includes/class-settings.php:123
+msgid "Product Name Truncation"
+msgstr ""
+
+#: includes/class-settings.php:131
+msgid "Advanced Settings"
+msgstr ""
+
+#: includes/class-settings.php:137
+msgid "Paper Width"
+msgstr ""
+
+#: includes/class-settings.php:143
+msgid "Show Billing Info"
+msgstr ""
+
+#: includes/class-settings.php:149
+msgid "Show Order Notes"
+msgstr ""
+
+#: includes/class-settings.php:194
+msgid "View Orders"
+msgstr ""
+
+#: includes/class-settings.php:214
+msgid "Select Image"
+msgstr ""
+
+#: includes/class-settings.php:217
+msgid "Remove"
+msgstr ""
+
+#: includes/class-settings.php:220
+msgid "Recommended: 400x100px (PNG or JPG)"
+msgstr ""
+
+#: includes/class-settings.php:232
+msgid "Visible"
+msgstr ""
+
+#: includes/class-settings.php:240
+msgid "Maximum characters for product name. Set -1 for no limit."
+msgstr ""
+
+#: includes/class-settings.php:248
+msgid "Select your thermal printer paper width."
+msgstr ""
+
+#: includes/class-settings.php:254
+msgid "Quick Links"
+msgstr ""
+
+#: includes/class-renderer.php:87
+msgid "Receipt"
+msgstr ""
+
+#: includes/class-renderer.php:138
+msgid "Order not found."
+msgstr ""
+
+#: includes/class-renderer.php:155
+msgid "No valid orders found."
+msgstr ""
+
+#: includes/class-admin.php:82
+msgid "WooPrint Receipt"
+msgstr ""
+
+#: includes/class-admin.php:103
+msgid "Print Receipt"
+msgstr ""
+
+#: includes/class-admin.php:110
+msgid "Preview Receipt"
+msgstr ""
+
+#: includes/class-admin.php:119
+msgid "Print Receipt"
+msgstr ""
+
+#: includes/class-admin.php:130
+msgid "Print Receipt"
+msgstr ""
+
+#: includes/class-admin.php:140
+msgid "Print Receipts"
+msgstr ""
+
+#: includes/class-frontend.php:37
+msgid "Print Receipt"
+msgstr ""
+
+#: includes/class-frontend.php:86
+msgid "Print Receipt"
+msgstr ""
+
+#: includes/class-frontend.php:121
+msgid "Printing..."
+msgstr ""
+
+#: includes/class-frontend.php:122
+msgid "Error generating receipt."
+msgstr ""
+
+#: includes/class-frontend.php:136
+msgid "You do not have permission to print this receipt."
+msgstr ""
+
+#: includes/class-frontend.php:142
+msgid "Order not found."
+msgstr ""
+
+#: templates/receipt.php:16
+msgid "Print"
+msgstr ""
+
+#: templates/receipt.php:21
+msgid "Store Logo"
+msgstr ""
+
+#: templates/receipt.php:31
+msgid "Order"
+msgstr ""
+
+#: templates/receipt.php:43
+msgid "Customer"
+msgstr ""
+
+#: templates/receipt.php:49
+msgid "ID"
+msgstr ""
+
+#: templates/receipt.php:52
+msgid "QTY"
+msgstr ""
+
+#: templates/receipt.php:55
+msgid "ITEM"
+msgstr ""
+
+#: templates/receipt.php:58
+msgid "TOTAL"
+msgstr ""
+
+#: templates/receipt.php:86
+msgid "Total"
+msgstr ""
+
+#: templates/receipt.php:92
+msgid "Payment"
+msgstr ""
+
+#: templates/receipt.php:99
+msgid "Notes"
+msgstr ""

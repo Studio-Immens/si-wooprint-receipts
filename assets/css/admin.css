@@ -1,0 +1,93 @@
+.wooprint-print-btn,
+.wooprint-preview-btn {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 4px;
+}
+
+.wooprint-print-btn .dashicons,
+.wooprint-print-btn-small .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.wooprint-print-btn-small {
+    padding: 0 6px !important;
+    min-height: 28px;
+    cursor: pointer;
+}
+
+.wooprint-print-btn-small .dashicons {
+    margin: 0;
+    line-height: 26px;
+}
+
+.wooprint-print-btn-front {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 4px;
+    margin: 10px 0;
+}
+
+.wooprint-print-btn-front .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.wooprint-image-field img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 4px;
+    background: #f0f0f1;
+}
+
+.form-table .wooprint-image-field p.description {
+    margin-top: 4px;
+}
+
+/* Printer & Rule post type list tables */
+.post-type-wooprint_printer .wp-list-table th#connection,
+.post-type-wooprint_printer .wp-list-table th#paper,
+.post-type-wooprint_printer .wp-list-table th#users,
+.post-type-wooprint_rule .wp-list-table th#trigger,
+.post-type-wooprint_rule .wp-list-table th#printer,
+.post-type-wooprint_rule .wp-list-table th#priority {
+    width: 15%;
+}
+
+.post-type-wooprint_rule .wp-list-table td.column-priority {
+    text-align: center;
+}
+
+.post-type-wooprint_rule .wp-list-table .wooprint-drag-handle {
+    cursor: grab;
+    color: #999;
+    font-size: 18px;
+    margin-right: 6px;
+}
+
+.post-type-wooprint_rule .wp-list-table .wooprint-drag-handle:active {
+    cursor: grabbing;
+}
+
+.post-type-wooprint_rule .wp-list-table tr.ui-sortable-helper {
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.post-type-wooprint_rule .wp-list-table tr.ui-sortable-placeholder {
+    visibility: visible !important;
+    background: #f0f6fc;
+    border: 2px dashed #2271b1;
+}
+
+/* Printer settings metabox */
+#wooprint_printer_settings .form-table th {
+    width: 180px;
+}
+
+#wooprint_printer_users label {
+    padding: 2px 0;
+}
