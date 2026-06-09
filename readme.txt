@@ -1,5 +1,5 @@
 === WooPrint Receipts - POS Receipt & Thermal Printer for WooCommerce ===
-Contributors: studioimmens
+Contributors: innovazioneweb
 Tags: woocommerce receipt, pos receipt, thermal printer, order print, receipt printer, restaurant receipt, retail receipt
 Requires at least: 5.8
 Tested up to: 6.7
@@ -7,6 +7,8 @@ Requires PHP: 7.4
 Stable tag: 1.0.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
+WC requires at least: 6.0
+WC tested up to: 9.0
 
 Generate professional, customizable POS receipts for WooCommerce orders. Perfect for retail stores, restaurants, bars, and thermal printers.
 

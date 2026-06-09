@@ -1,0 +1,56 @@
+name: Generate Release
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'si-wooprint-receipts.php'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get Version
+        id: get_version
+        run: |
+          VERSION=$(grep -i "Version:" si-wooprint-receipts.php | sed -E 's/.*Version:[[:space:]]*([0-9\.]+).*/\1/i' | head -n 1)
+          echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
+          echo "Detected version: $VERSION"
+
+      - name: Check if Tag exists
+        id: check_tag
+        run: |
+          TAG="v${{ steps.get_version.outputs.VERSION }}"
+          if git rev-parse "$TAG" >/dev/null 2>&1; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+            echo "Tag $TAG already exists."
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+            echo "Tag $TAG does not exist. Proceeding with release."
+          fi
+
+      - name: Create ZIP for WordPress
+        if: steps.check_tag.outputs.exists == 'false'
+        run: |
+          git archive --format=zip --prefix=si-wooprint-receipts/ -o si-wooprint-receipts.zip HEAD
+          echo "ZIP created: si-wooprint-receipts.zip"
+
+      - name: Create Release
+        if: steps.check_tag.outputs.exists == 'false'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.get_version.outputs.VERSION }}
+          name: Version ${{ steps.get_version.outputs.VERSION }}
+          files: si-wooprint-receipts.zip
+          generate_release_notes: true
+          draft: false
+          prerelease: false
