@@ -175,10 +175,11 @@ class WooPrint_Admin {
         if ( !$screen || !in_array( $screen->id, array( 'edit-shop_order', 'woocommerce_page_wc-orders' ), true ) ) {
             return;
         }
-        if ( empty( $_GET['wooprint_bulk'] ) ) {
+        $bulk = isset( $_GET['wooprint_bulk'] ) ? sanitize_text_field( wp_unslash( $_GET['wooprint_bulk'] ) ) : '';
+        if ( empty( $bulk ) ) {
             return;
         }
-        $ids = array_map( 'absint', explode( ',', $_GET['wooprint_bulk'] ) );
+        $ids = array_map( 'absint', explode( ',', $bulk ) );
         $ids = array_filter( $ids );
         if ( empty( $ids ) ) {
             return;
@@ -187,7 +188,7 @@ class WooPrint_Admin {
         ?>
         <div class="notice notice-info is-dismissible">
             <p>
-                <strong><?php echo esc_html( sprintf( _n( '%d order ready for printing.', '%d orders ready for printing.', $count, 'si-wooprint-receipts' ), $count ) ); ?></strong>
+                <strong><?php echo esc_html( sprintf( /* translators: %d: number of orders ready for printing */ _n( '%d order ready for printing.', '%d orders ready for printing.', $count, 'si-wooprint-receipts' ), $count ) ); ?></strong>
             </p>
             <p>
                 <button type="button" class="button button-primary" id="wooprint-bulk-print-btn" data-order-ids="<?php echo esc_attr( implode( ',', $ids ) ); ?>">

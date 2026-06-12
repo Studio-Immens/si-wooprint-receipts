@@ -143,15 +143,15 @@ class WooPrint_Printer {
     }
 
     public function save_meta( $post_id, $post ) {
-        if ( !isset( $_POST['wooprint_printer_nonce'] ) || !wp_verify_nonce( $_POST['wooprint_printer_nonce'], 'wooprint_printer_save' ) ) {
+        if ( !isset( $_POST['wooprint_printer_nonce'] ) || !wp_verify_nonce( wp_unslash( $_POST['wooprint_printer_nonce'] ), 'wooprint_printer_save' ) ) {
             return;
         }
         if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
             return;
         }
 
-        update_post_meta( $post_id, '_wooprint_connection', sanitize_text_field( $_POST['wooprint_connection'] ?? 'browser' ) );
-        update_post_meta( $post_id, '_wooprint_paper_width', sanitize_text_field( $_POST['wooprint_paper_width'] ?? '80mm' ) );
+        update_post_meta( $post_id, '_wooprint_connection', sanitize_text_field( wp_unslash( $_POST['wooprint_connection'] ?? 'browser' ) ) );
+        update_post_meta( $post_id, '_wooprint_paper_width', sanitize_text_field( wp_unslash( $_POST['wooprint_paper_width'] ?? '80mm' ) ) );
         update_post_meta( $post_id, '_wooprint_auto_print', isset( $_POST['wooprint_auto_print'] ) ? 'yes' : 'no' );
         update_post_meta( $post_id, '_wooprint_copies', absint( $_POST['wooprint_copies'] ?? 1 ) );
 

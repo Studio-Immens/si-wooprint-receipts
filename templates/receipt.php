@@ -61,26 +61,26 @@ defined( 'ABSPATH' ) || exit;
             </tr>
         </thead>
         <tbody>
-            <?php foreach ( $data['items'] as $item ) : ?>
+            <?php foreach ( $data['items'] as $wooprint_item ) : ?>
                 <?php
-                $truncate = intval( $settings['name_truncate'] ?? 30 );
-                $name = $item['name'];
-                if ( $truncate > 0 && mb_strlen( $name ) > $truncate ) {
-                    $name = mb_substr( $name, 0, $truncate ) . '..';
+                $wooprint_truncate = intval( $settings['name_truncate'] ?? 30 );
+                $wooprint_name = $wooprint_item['name'];
+                if ( $wooprint_truncate > 0 && mb_strlen( $wooprint_name ) > $wooprint_truncate ) {
+                    $wooprint_name = mb_substr( $wooprint_name, 0, $wooprint_truncate ) . '..';
                 }
                 ?>
                 <tr>
                     <?php if ( 'yes' === ( $settings['show_column_id'] ?? 'yes' ) ) : ?>
-                        <td class="col-id"><?php echo esc_html( $item['id'] ); ?></td>
+                        <td class="col-id"><?php echo esc_html( $wooprint_item['id'] ); ?></td>
                     <?php endif; ?>
                     <?php if ( 'yes' === ( $settings['show_column_qty'] ?? 'yes' ) ) : ?>
-                        <td class="col-qty"><?php echo esc_html( $item['qty'] ); ?></td>
+                        <td class="col-qty"><?php echo esc_html( $wooprint_item['qty'] ); ?></td>
                     <?php endif; ?>
                     <?php if ( 'yes' === ( $settings['show_column_name'] ?? 'yes' ) ) : ?>
-                        <td class="col-name"><?php echo esc_html( $name ); ?></td>
+                        <td class="col-name"><?php echo esc_html( $wooprint_name ); ?></td>
                     <?php endif; ?>
                     <?php if ( 'yes' === ( $settings['show_column_total'] ?? 'yes' ) ) : ?>
-                        <td class="col-total"><?php echo wp_kses_post( $item['total'] ); ?></td>
+                        <td class="col-total"><?php echo wp_kses_post( $wooprint_item['total'] ); ?></td>
                     <?php endif; ?>
                 </tr>
             <?php endforeach; ?>
@@ -100,8 +100,8 @@ defined( 'ABSPATH' ) || exit;
     <?php if ( !empty( $data['order_notes'] ) ) : ?>
         <div class="full notes-row">
             <p><strong><?php esc_html_e( 'Notes', 'si-wooprint-receipts' ); ?>:</strong></p>
-            <?php foreach ( $data['order_notes'] as $note ) : ?>
-                <p><?php echo esc_html( $note ); ?></p>
+            <?php foreach ( $data['order_notes'] as $wooprint_note ) : ?>
+                <p><?php echo esc_html( $wooprint_note ); ?></p>
             <?php endforeach; ?>
         </div>
     <?php endif; ?>

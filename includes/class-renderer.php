@@ -128,7 +128,7 @@ class WooPrint_Renderer {
         if ( file_exists( $css_file ) ) {
             $css = file_get_contents( $css_file );
             $css = str_replace( '{paper_width}', $width, $css );
-            echo $css;
+            echo wp_strip_all_tags( $css );
         }
     }
 

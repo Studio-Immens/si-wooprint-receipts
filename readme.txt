@@ -1,8 +1,8 @@
-=== WooPrint Receipts - POS Receipt & Thermal Printer for WooCommerce ===
+=== SI Print Receipts - POS Receipt & Thermal Printer for WooCommerce ===
 Contributors: innovazioneweb
-Tags: woocommerce receipt, pos receipt, thermal printer, order print, receipt printer, restaurant receipt, retail receipt
+Tags: woocommerce receipt, pos receipt, thermal printer, order print, receipt printer
 Requires at least: 5.8
-Tested up to: 6.7
+Tested up to: 7.0
 Requires PHP: 7.4
 Stable tag: 1.0.0
 License: GPLv3 or later
@@ -14,7 +14,7 @@ Generate professional, customizable POS receipts for WooCommerce orders. Perfect
 
 == Description ==
 
-WooPrint Receipts transforms your WooCommerce orders into clean, professional POS receipts ready for printing. Whether you run a retail store, restaurant, bar, or any physical business using WooCommerce as your POS system, WooPrint Receipts gives you and your customers a polished receipt in seconds.
+SI Print Receipts transforms your WooCommerce orders into clean, professional POS receipts ready for printing. Whether you run a retail store, restaurant, bar, or any physical business using WooCommerce as your POS system, SI Print Receipts gives you and your customers a polished receipt in seconds.
 
 = Features =
 
@@ -42,9 +42,9 @@ WooPrint Receipts transforms your WooCommerce orders into clean, professional PO
 == Installation ==
 
 1. Go to Plugins > Add New in your WordPress admin
-2. Search for "WooPrint Receipts"
+2. Search for "SI Print Receipts"
 3. Click Install Now, then Activate
-4. Go to WooCommerce > WooPrint Receipts to configure your settings
+4. Go to WooCommerce > SI Print Receipts to configure your settings
 5. Upload your logo and customize header/footer text
 6. Start printing receipts directly from your order pages
 
@@ -52,7 +52,7 @@ WooPrint Receipts transforms your WooCommerce orders into clean, professional PO
 
 = Do I need any other plugin? =
 
-No. WooPrint Receipts works standalone with WooCommerce. No additional plugins required.
+No. SI Print Receipts works standalone with WooCommerce. No additional plugins required.
 
 = Which paper sizes are supported? =
 
@@ -64,7 +64,7 @@ Yes. Customers can print receipts from the order thank you page and their My Acc
 
 = Is it compatible with HPOS? =
 
-Yes. WooPrint Receipts fully supports WooCommerce High-Performance Order Storage (HPOS).
+Yes. SI Print Receipts fully supports WooCommerce High-Performance Order Storage (HPOS).
 
 = Can I customize the receipt? =
 

@@ -212,16 +212,16 @@ class WooPrint_Rule_Engine {
     }
 
     public function save_meta( $post_id, $post ) {
-        if ( !isset( $_POST['wooprint_rule_nonce'] ) || !wp_verify_nonce( $_POST['wooprint_rule_nonce'], 'wooprint_rule_save' ) ) {
+        if ( !isset( $_POST['wooprint_rule_nonce'] ) || !wp_verify_nonce( wp_unslash( $_POST['wooprint_rule_nonce'] ), 'wooprint_rule_save' ) ) {
             return;
         }
         if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
             return;
         }
 
-        update_post_meta( $post_id, '_wooprint_trigger', sanitize_text_field( $_POST['wooprint_trigger'] ?? 'new_order' ) );
+        update_post_meta( $post_id, '_wooprint_trigger', sanitize_text_field( wp_unslash( $_POST['wooprint_trigger'] ?? 'new_order' ) ) );
 
-        $statuses = isset( $_POST['wooprint_trigger_statuses'] ) ? array_map( 'sanitize_text_field', $_POST['wooprint_trigger_statuses'] ) : array();
+        $statuses = isset( $_POST['wooprint_trigger_statuses'] ) ? array_map( 'sanitize_text_field', wp_unslash( $_POST['wooprint_trigger_statuses'] ) ) : array();
         update_post_meta( $post_id, '_wooprint_trigger_statuses', $statuses );
 
         $apply_all = isset( $_POST['wooprint_apply_all'] ) ? '1' : '0';
@@ -230,7 +230,7 @@ class WooPrint_Rule_Engine {
         $users = isset( $_POST['wooprint_filter_users'] ) ? array_map( 'absint', $_POST['wooprint_filter_users'] ) : array();
         update_post_meta( $post_id, '_wooprint_filter_users', $users );
 
-        $roles = isset( $_POST['wooprint_filter_roles'] ) ? array_map( 'sanitize_text_field', $_POST['wooprint_filter_roles'] ) : array();
+        $roles = isset( $_POST['wooprint_filter_roles'] ) ? array_map( 'sanitize_text_field', wp_unslash( $_POST['wooprint_filter_roles'] ) ) : array();
         update_post_meta( $post_id, '_wooprint_filter_roles', $roles );
 
         $printer = isset( $_POST['wooprint_target_printer'] ) ? absint( $_POST['wooprint_target_printer'] ) : 0;

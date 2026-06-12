@@ -13,16 +13,7 @@ class WooPrint_Main {
     }
 
     private function __construct() {
-        $this->load_textdomain();
         $this->init_hooks();
-    }
-
-    private function load_textdomain() {
-        load_plugin_textdomain(
-            'si-wooprint-receipts',
-            false,
-            dirname( plugin_basename( SI_WOOPRINT_FILE ) ) . '/languages'
-        );
     }
 
     private function init_hooks() {

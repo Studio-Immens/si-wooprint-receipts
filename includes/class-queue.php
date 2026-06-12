@@ -87,6 +87,7 @@ class WooPrint_Queue {
 
         $locked_since = gmdate( 'Y-m-d H:i:s', time() - self::LOCK_SECONDS );
 
+        // phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
         return $wpdb->get_results( $wpdb->prepare(
             "SELECT * FROM {$this->table_name}
              WHERE user_id = %d
@@ -97,6 +98,7 @@ class WooPrint_Queue {
             $user_id,
             $locked_since
         ) );
+        // phpcs:enable
     }
 
     public function lock_job( $job_id ) {

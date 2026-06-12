@@ -5,7 +5,7 @@
  * @link              https://studioimmens.com
  *
  * @wordpress-plugin
- * Plugin Name:       WooPrint Receipts - POS Receipt & Thermal Printer for WooCommerce
+ * Plugin Name:       SI Print Receipts - POS Receipt & Thermal Printer for WooCommerce
  * Plugin URI:        https://studioimmens.com/si-wooprint-receipts
  * Description:       Generate professional, customizable POS receipts for WooCommerce orders. Perfect for retail stores, restaurants, and thermal printers.
  * Version:           1.0.0
@@ -17,7 +17,7 @@
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
  * Requires Plugins:  woocommerce
  * Requires at least: 5.8
- * Tested up to:      6.7
+ * Tested up to:      7.0
  * WC requires at least: 6.0
  * WC tested up to:   9.0
  */
@@ -55,7 +55,7 @@ function si_wooprint_init() {
 function si_wooprint_woocommerce_missing_notice() {
     ?>
     <div class="notice notice-error">
-        <p><?php esc_html_e( 'WooPrint Receipts requires WooCommerce to be installed and active.', 'si-wooprint-receipts' ); ?></p>
+        <p><?php esc_html_e( 'SI Print Receipts requires WooCommerce to be installed and active.', 'si-wooprint-receipts' ); ?></p>
     </div>
     <?php
 }

@@ -38,7 +38,7 @@ class WooPrint_Frontend {
             return true;
         }
         if ( $order->get_customer_id() === 0 && !is_user_logged_in() ) {
-            $order_key = isset( $_GET['key'] ) ? sanitize_text_field( $_GET['key'] ) : '';
+            $order_key = isset( $_GET['key'] ) ? sanitize_text_field( wp_unslash( $_GET['key'] ) ) : '';
             if ( !empty( $order_key ) && $order->get_order_key() === $order_key ) {
                 return true;
             }

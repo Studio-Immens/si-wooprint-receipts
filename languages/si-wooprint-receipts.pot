@@ -2,7 +2,7 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: WooPrint Receipts 1.0.0\n"
+"Project-Id-Version: SI Print Receipts 1.0.0\n"
 "Report-Msgid-Bugs-To: https://studioimmens.com\n"
 "Last-Translator: Studio Immens <info@studioimmens.com>\n"
 "Language-Team: Studio Immens\n"
@@ -14,7 +14,7 @@ msgstr ""
 "X-Generator: si-wooprint-receipts 1.0.0\n"
 
 #: si-wooprint-receipts.php:42
-msgid "WooPrint Receipts requires WooCommerce to be installed and active."
+msgid "SI Print Receipts requires WooCommerce to be installed and active."
 msgstr ""
 
 #: includes/class-main.php:51
@@ -22,7 +22,7 @@ msgid "Settings"
 msgstr ""
 
 #: includes/class-settings.php:54
-msgid "WooPrint Receipts"
+msgid "SI Print Receipts"
 msgstr ""
 
 #: includes/class-settings.php:70

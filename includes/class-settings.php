@@ -37,8 +37,8 @@ class WooPrint_Settings {
     public function add_admin_menu() {
         add_submenu_page(
             'woocommerce',
-            __( 'WooPrint Receipts', 'si-wooprint-receipts' ),
-            __( 'WooPrint Receipts', 'si-wooprint-receipts' ),
+            __( 'SI Print Receipts', 'si-wooprint-receipts' ),
+            __( 'SI Print Receipts', 'si-wooprint-receipts' ),
             'manage_woocommerce',
             $this->page_slug,
             array( $this, 'render_settings_page' )
