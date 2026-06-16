@@ -1,0 +1,13 @@
+.git
+.github
+.gitignore
+.gitattributes
+.distignore
+INTERNAL_DOCUMENTATION.md
+README.md
+.wordpress-org
+node_modules
+vendor
+.DS_Store
+Thumbs.db
+*.log
