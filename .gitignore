@@ -1,45 +1,30 @@
-# WordPress - ignore core, configuration, examples, uploads and logs.
-# https://github.com/github/gitignore/blob/main/WordPress.gitignore
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
 
-# Core
-/wp-admin/
-/wp-content/index.php
-/wp-content/languages
-/wp-content/plugins/index.php
-/wp-content/themes/index.php
-/wp-includes/
-/index.php
-/license.txt
-/readme.html
-/wp-*.php
-/xmlrpc.php
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
 
-# Configuration
-wp-config.php
+# Dependencies
+node_modules/
+vendor/
 
-# Example themes
-/wp-content/themes/twenty*/
+# Build artifacts
+*.zip
+*.tar.gz
 
-# Example plugin
-/wp-content/plugins/hello.php
+# Environment
+.env
+.env.local
 
-# Uploads
-/wp-content/uploads/
-
-# Log files
+# Logs
 *.log
-
-# htaccess
-/.htaccess
-
-# All plugins
-#/wp-content/plugins
-
-# All themes
-#/wp-content/themes
+debug.log
 
 # Internal / dev files not for distribution
 INTERNAL_DOCUMENTATION.md
-*.log
-debug.log
 .git/
