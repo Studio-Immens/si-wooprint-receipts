@@ -8,7 +8,7 @@
  * Plugin Name:       SI Print Receipts - POS Receipt & Thermal Printer for WooCommerce
  * Plugin URI:        https://studioimmens.com/si-wooprint-receipts
  * Description:       Generate professional, customizable POS receipts for WooCommerce orders. Perfect for retail stores, restaurants, and thermal printers.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Studio Immens
  * Author URI:        https://studioimmens.com
  * Text Domain:       si-wooprint-receipts
@@ -24,7 +24,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'SI_WOOPRINT_VERSION', '1.0.0' );
+define( 'SI_WOOPRINT_VERSION', '1.0.1' );
 define( 'SI_WOOPRINT_FILE', __FILE__ );
 define( 'SI_WOOPRINT_PATH', plugin_dir_path( __FILE__ ) );
 define( 'SI_WOOPRINT_URL', plugin_dir_url( __FILE__ ) );
